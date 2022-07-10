@@ -1,5 +1,6 @@
-from fastapi import FastAPI
 import uvicorn
+
+from fastapi import FastAPI
 from motor.motor_asyncio import AsyncIOMotorClient
 from config import settings
 

@@ -1,11 +1,11 @@
-from typing import Optional
 import uuid
+
 from pydantic import BaseModel, Field
 
 
 class TaskModel(BaseModel):
     id: str = Field(default_factory=uuid.uuid4, alias="_id")
-    name: str = Field(...)
+    name: str
     completed: bool = False
 
     class Config:
@@ -20,8 +20,8 @@ class TaskModel(BaseModel):
 
 
 class UpdateTaskModel(BaseModel):
-    name: Optional[str]
-    completed: Optional[bool]
+    name: str
+    completed: bool
 
     class Config:
         schema_extra = {

@@ -3,7 +3,7 @@ from pydantic import BaseSettings
 
 class CommonSettings(BaseSettings):
     APP_NAME: str = "FARM Intro"
-    DEBUG_MODE: bool = False
+    DEBUG_MODE: bool = True
 
 
 class ServerSettings(BaseSettings):
@@ -12,8 +12,8 @@ class ServerSettings(BaseSettings):
 
 
 class DatabaseSettings(BaseSettings):
-    DB_URL: str
-    DB_NAME: str
+    DB_URL: str = 'mongodb://localhost:27017'
+    DB_NAME: str = 'todo_app'
 
 
 class Settings(CommonSettings, ServerSettings, DatabaseSettings):
