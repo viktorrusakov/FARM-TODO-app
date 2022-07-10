@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const fetchAllTasks = async () => {
-      const response = await fetch("/task/")
+      const response = await fetch("http://localhost:8000/task/")
       const fetchedTasks = await response.json()
       setTasks(fetchedTasks)
     }
