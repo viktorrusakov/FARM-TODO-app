@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const fetchAllTasks = async () => {
-      const response = await fetch(`${process.env.API_BASE_URL}/task/`)
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/task/`)
       const fetchedTasks = await response.json()
       setTasks(fetchedTasks)
     }
