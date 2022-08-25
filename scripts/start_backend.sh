@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd FARM-TODO-app/backend || exit
+cd ~/FARM-TODO-app/backend || exit
 apt install python3.8-venv
 python3 -m venv venv
 source venv/bin/activate
